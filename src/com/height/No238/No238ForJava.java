@@ -1,4 +1,4 @@
-package com.zhenyu.No238;
+package com.height.No238;
 
 /**
  *  238. 除自身以外数组的乘积
