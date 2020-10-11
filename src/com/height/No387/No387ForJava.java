@@ -20,7 +20,9 @@ public class No387ForJava {
         for (int i = 0; i < s.length(); i++) {
             String thisChar = String.valueOf(s.charAt(i));
             if (charCount.containsKey(thisChar)) {
-                charCount.put(thisChar, -1);
+                if(!(charCount.get(thisChar).equals(-1))){
+                    charCount.put(thisChar, -1);
+                }
             } else {
                 charCount.put(thisChar, i);
             }
