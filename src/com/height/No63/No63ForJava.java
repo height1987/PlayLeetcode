@@ -15,7 +15,7 @@ package com.height.No63;
  * 1.第一行和第一列位置都是只有1种走法
  * 2.除此之外的位置可以从他的左面单元和上面到达，所以到当前位置的路径是到达左面单元和到达上面单元的路径之和
  * 即dp[i][j] = dp[i-1][j]+dp[i][j-1]
- * 
+ * 因为有障碍，所以仅在于，每次判断下障碍位置的路线条数为0
  */
 public class No63ForJava {
     public static int uniquePathsWithObstacles(int[][] grid) {
