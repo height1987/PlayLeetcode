@@ -16,10 +16,7 @@ import java.util.Set;
  *
  *
  *     解决思路：
- *     问题可以转化为:
- *     以j作为结尾的子串中，最大的子串和是：
- *     sum[0,j]-min(0,min(sum[0,0],...,sum[0,j-1]))
- *     解释：是0~j位置的子串，减去 在j位置之前的且最小的且小于0的前缀子串和
+ *     
  *
  */
 public class No16D24ForJava {
