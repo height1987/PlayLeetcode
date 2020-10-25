@@ -1,8 +1,6 @@
 package com.height.No16D24;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  *     面试题 16.24. 数对和
@@ -16,15 +14,37 @@ import java.util.Set;
  *
  *
  *     解决思路：
- *     
+ *
  *
  */
 public class No16D24ForJava {
-    public int pairSums(int[] nums) {
+    public static List<List<Integer>> pairSums(int[] nums, int target) {
         if(nums == null){
-            return 0;
+            return new ArrayList<>();
         }
-        Map<Integer, Set<Integer>>  res= new HashMap<>();
+        List<List<Integer>>  res= new ArrayList<>();
+        Map<Integer, Integer>  resTmp= new HashMap<>();
+        for(int i = 0 ; i < nums.length;i++) {
+            Integer currentKey = target - nums[i];
+            if(resTmp.containsKey(currentKey)){
+                Integer oneResCount = resTmp.get(currentKey);
+                res.add(getOneRes(nums[i], currentKey));
+                if(oneResCount  == 1){
+                    resTmp.remove(currentKey);
+                }else{
+                    resTmp.put(currentKey,oneResCount-1);
+                }
+            }else{
+                resTmp.put(nums[i],resTmp.getOrDefault(nums[i],0)+1);
+            }
+        }
+        return res;
     }
 
+    private static List<Integer> getOneRes(int one, Integer two) {
+        List<Integer> res = new ArrayList<>();
+        res.add(one);
+        res.add(two);
+        return res;
+    }
 }
