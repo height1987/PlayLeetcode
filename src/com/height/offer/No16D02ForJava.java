@@ -20,6 +20,8 @@ import java.util.HashMap;
  * wordsFrequency.get("apple"); //返回1
  * wordsFrequency.get("pen"); //返回1
  *
+ *  思路：直接把word进行索引，放到map中去，key是word，value是出现次数
+ *  get方法直接从map中取
  *
  */
 public class No16D02ForJava {
