@@ -24,7 +24,7 @@ public class No04D10ForJava {
             return checkSubTree(t1.left, t2.left) && checkSubTree(t1.right, t2.right);
         } else {
             //两节点值不同，t1继续寻找
-            return checkSubTree(t1.left, t2) || checkSubTree(t1.right, t2)
+            return checkSubTree(t1.left, t2) || checkSubTree(t1.right, t2);
         }
     }
 }
