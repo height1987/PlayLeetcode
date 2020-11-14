@@ -17,8 +17,8 @@ import java.util.Map;
 
 public class No16D15 {
 
-    int capacity;
-    Map<Integer, Integer> map;
+    private int capacity;
+    private Map<Integer, Integer> map;
 
     public No16D15(int capacity) {
         this.capacity = capacity;
